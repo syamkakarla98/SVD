@@ -1,0 +1,11 @@
+function im=svdImg(img,k)
+  a=rgb2gray(img);
+  a=im2double(a);
+  [u,s,v]=svd(a);
+  v=v';
+  [x,n]=size(a);
+  u(:,[k:n])=[];
+  v([k:n],:)=[];
+  s(:,[k:n])=[];
+  s([k:n],:)=[];
+  im=u*s*v;
