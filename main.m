@@ -1,4 +1,4 @@
-ci=imread('krish.jpg');
+ci=imread('input.jpg');
 subplot(3,3,3);
 k=input('Enter key value :');
 [m,n]=size(rgb2gray(ci));
